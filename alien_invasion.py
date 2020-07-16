@@ -15,7 +15,7 @@ class AlienInvasion:
         # watch mouse and keys events
         while True:
             for event in pygame.event.get():
-                if event.type() == pygame.QUIT:
+                if event.type == pygame.QUIT:
                     sys.exit()
 
         # make the most recently drawn screen visible
