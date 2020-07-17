@@ -4,6 +4,8 @@ import pygame
 
 # modules
 from settings import Settings
+from ship import Ship
+
 
 # Overall class to manage game assets and behaviour
 class AlienInvasion:
@@ -15,6 +17,8 @@ class AlienInvasion:
             (self.settings.screen_width, self.settings.screen_width)
         )
         pygame.display.set_caption("Alien Invasion by github.com/adolfolh")
+
+        self.ship = Ship(self)
 
         # set bg color
         self.bg_color = (230, 230, 230)
@@ -29,6 +33,7 @@ class AlienInvasion:
 
             # redraw the screen during each pass through the loop
             self.screen.fill(self.settings.bg_color)
+            self.ship.blitme()
 
             # make the most recently drawn screen visible
             pygame.display.flip()

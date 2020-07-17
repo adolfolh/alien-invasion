@@ -1,6 +1,7 @@
 # libraries
 import pygame
 
+
 # class to manage the ship
 class Ship:
     # initialise the ship and starting position
